@@ -1,0 +1,13 @@
+<div class="p-3">
+    <img [src]="product.pImage 
+" alt="">
+<p>Name:{{product.name}}</p>
+<p>Price:{{'$'+ product.price}}</p>
+<p>Color:{{product.color}}</p>
+<p>Discounted Price : {{getDiscountedPrice().toFixed(2)}}</p>
+<p>{{product.inStock>0 ? 'only '+product.inStock +' items available':'product currently out of stock'}}</p>
+<button class="btn btn-primary" (click)="incrementQuantity()">+</button>
+<span class="mx-2">{{productQuantity}}</span>
+<button class="btn btn-primary" (click)="decrementQuantity()">-</button>
+</div>
+
